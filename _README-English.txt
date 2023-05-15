@@ -2,10 +2,14 @@ How to install
 
 1. Place all files from the directory of this readme file, into /your_server_folder/resources/ivspawnpoints/ <here>
 
-2. Then update your server.xml to load the resource:
+2. Then update your server.xml:
 	<resources>
 		<resource src="ivspawnpoints" />
 	</resources>
+
+This resource has been tested with iv_gamemode -1:
+	<iv_gamemode>-1</iv_gamemode>
+	<iv_episode>0</iv_episode>
 
 3. Add your player username to the commandpermissions.txt file.
 Keep this file blank when your server is live, or disable the add/remove spawn point commands when done.
