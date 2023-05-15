@@ -1,0 +1,1 @@
+﻿# spawn point id, ped model hash, x, y, z, heading, interior, name
