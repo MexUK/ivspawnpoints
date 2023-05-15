@@ -1,3 +1,18 @@
+How to install
+
+1. Place all files from the directory of this readme file, into /your_server_folder/resources/ivspawnpoints/ <here>
+
+2. Then update your server.xml to load the resource:
+	<resources>
+		<resource src="ivspawnpoints" />
+	</resources>
+
+3. Add your player username to the commandpermissions.txt file.
+
+4. If the server is running, you'll need to restart it for the changes to apply.
+
+------------------------
+
 commandpermissions.txt
 
 This file contains the player usernames allowed to use the /addspawnpoint and /removespawnpoint commands.
