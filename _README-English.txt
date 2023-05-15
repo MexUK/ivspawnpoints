@@ -8,6 +8,7 @@ How to install
 	</resources>
 
 3. Add your player username to the commandpermissions.txt file.
+Keep this file blank when your server is live, or disable the add/remove spawn point commands when done.
 
 4. If the server is running, you'll need to restart it for the changes to apply.
 
@@ -42,4 +43,26 @@ You can also add/remove lines from the this file when the server is running, wit
 Don't format this file manually with custom tabs or spacing, because the file can be updated automatically.
 
 ------------------------
+
+Customization
+
+Open server.js with notepad or any text file editor.
+
+
+To disable chat messages when a player spawns:
+Change:
+		this.spawnChatMessages = true;
+to:
+		this.spawnChatMessages = false;
+
+
+To disable the add/remove spawn point commands:
+Change:
+		this.addRemoveCommandsEnabled = true;
+to:
+		this.addRemoveCommandsEnabled = false;
+
+
+Please note:
+For script files (e.g. js, not txt), a server restart is required for the changes to apply.
 

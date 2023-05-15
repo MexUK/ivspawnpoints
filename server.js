@@ -5,6 +5,9 @@ class SpawnPoints
 		this.SPAWN_POINTS_FILE_PATH = 'spawnpoints.txt';
 		this.COMMAND_PERMISSIONS_FILE_PATH = 'commandpermissions.txt';
 		
+		this.spawnChatMessages = true;
+		this.addRemoveCommandsEnabled = true;
+		
 		this.SPAWN_POINT_WHEN_SPAWN_POINTS_FILE_IS_EMPTY = {
 			spawnPointId: 0,
 			pedModelId: -1188246269,
@@ -113,7 +116,8 @@ class SpawnPoints
 			let spawnPoint = this.getRandomSpawnPoint();
 			spawnPlayer(client, new Vec3(spawnPoint.x, spawnPoint.y, spawnPoint.z), spawnPoint.heading, spawnPoint.pedModelId, spawnPoint.interior);
 			
-			this.chat(client.name+' spawned at '+spawnPoint.name+'.');
+			if(this.spawnChatMessages)
+				this.chat(client.name+' spawned at '+spawnPoint.name+'.');
 		});
 	}
 	
@@ -172,6 +176,8 @@ class SpawnPoints
 	// model
 	canClientUseCommand(client, command)
 	{
+		if(!this.addRemoveCommandsEnabled)
+			return false;
 		let playerNameLower1 = client.name.toLowerCase();
 		let playerNames = this.getPermittedPlayerNamesForCommands();
 		for(let i in playerNames)
